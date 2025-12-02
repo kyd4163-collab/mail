@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannon Master</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="start-screen" class="screen active">
+                <h1>CANNON MASTER</h1>
+                <p>Aim, Charge, Fire!</p>
+                <button id="start-btn" class="primary-btn">START GAME</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h2>GAME OVER</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="primary-btn">TRY AGAIN</button>
+            </div>
+
+            <div id="hud" class="hidden">
+                <div class="score-board">
+                    <span>SCORE</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="power-meter">
+                    <div class="power-label">POWER</div>
+                    <div class="power-bar-bg">
+                        <div id="power-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
